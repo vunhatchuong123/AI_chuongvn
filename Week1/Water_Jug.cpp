@@ -17,7 +17,7 @@ int main()
   int target;
   /// viet ham nhap a,b, target tu ban phim
   // CODE HERE
-  cout << "Nhap a limit:";
+  cout << "Nhap a limit: ";
   cin >> a;
   cout << "Nhap b limit: ";
   cin >> b;
