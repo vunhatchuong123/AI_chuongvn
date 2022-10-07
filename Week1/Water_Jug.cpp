@@ -1,6 +1,5 @@
 #include <iostream>
 #include <map>
-#include <vector>
 #include <queue>
 
 using namespace std;
@@ -58,9 +57,19 @@ void BFS(int a, int b, int target)
     {
       isSolvable = true;
 
-      printresult(node, currentNode);
       // CODE HERE
-      // printresult(node, currentNode);
+      if (currentNode.first == target)
+      {
+        node[{currentNode.first, 0}] = currentNode;
+        currentNode.second = 0;
+      }
+
+      if (currentNode.second == target)
+      {
+        node[{0, currentNode.second}] = currentNode;
+        currentNode.first = 0;
+      }
+      printresult(node, currentNode);
       return;
     }
     // ======= Operation =====
@@ -71,9 +80,9 @@ void BFS(int a, int b, int target)
       q.push({a, currentNode.second});
       node[{a, currentNode.second}] = currentNode; // Set father
     }
+
     // fill into jug 2
     // CODE HERE
-
     if (isChecked[{currentNode.first, b}] != 1)
     {
       q.push({currentNode.first, b});
@@ -99,10 +108,10 @@ void BFS(int a, int b, int target)
         node[{0, c}] = currentNode;
       }
     }
+
     // from jug 2 to j1
     // CODE HERE
-
-    int d2 = a - currentNode.first;
+    int d2 = a - currentNode.first; // from jug 2 to jug 1
     if (currentNode.second >= d2)
     {
       int c2 = currentNode.second - d2; // transfer a little
