@@ -58,13 +58,13 @@ void BFS(int a, int b, int target)
       isSolvable = true;
 
       // CODE HERE
-      if (currentNode.first == target)
+      if (currentNode.first == target && currentNode.second != 0)
       {
         node[{currentNode.first, 0}] = currentNode;
         currentNode.second = 0;
       }
 
-      if (currentNode.second == target)
+      if (currentNode.second == target && currentNode.second != 0)
       {
         node[{0, currentNode.second}] = currentNode;
         currentNode.first = 0;
