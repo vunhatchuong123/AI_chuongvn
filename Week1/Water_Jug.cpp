@@ -60,6 +60,7 @@ void BFS(int a, int b, int target)
 
       printresult(node, currentNode);
       // CODE HERE
+      // printresult(node, currentNode);
       return;
     }
     // ======= Operation =====
@@ -100,6 +101,26 @@ void BFS(int a, int b, int target)
     }
     // from jug 2 to j1
     // CODE HERE
+
+    int d2 = a - currentNode.first;
+    if (currentNode.second >= d2)
+    {
+      int c2 = currentNode.second - d2; // transfer a little
+      if (isChecked[{a, c2}] != 1)
+      {
+        q.push({a, c2});
+        node[{a, c2}] = currentNode;
+      }
+    }
+    else
+    {
+      int c2 = currentNode.first + currentNode.second;
+      if (isChecked[{c2, 0}] != 1)
+      { /// transfer all
+        q.push({c2, 0});
+        node[{c2, 0}] = currentNode;
+      }
+    }
 
     if (isChecked[{currentNode.first, 0}] != 1)
     {
