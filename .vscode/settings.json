@@ -1,5 +1,9 @@
 {
   "files.associations": {
+<<<<<<< HEAD
     "utility": "cpp"
+=======
+    "vector": "cpp"
+>>>>>>> ccdceb850dd7358c60ff633c225f8700cf72e23e
   }
 }

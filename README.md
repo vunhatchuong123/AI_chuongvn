@@ -13,3 +13,9 @@ Multiple graphing method.
 - Adjacency matrix.
 - Edge list.
 - Adjacency list.
+
+## Week 3: Heuristic
+
+Multiple methods
+
+- Greedy
