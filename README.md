@@ -19,3 +19,7 @@ Multiple graphing method.
 Multiple methods
 
 - Greedy
+
+## Week 4: Minimax
+
+Use Minimax and alpha-beta pruning for Tic Tac Toe.
