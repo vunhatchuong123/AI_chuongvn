@@ -5,7 +5,7 @@ void printBoard(int A[][3]);
 int checkEnd(int A[][3]);
 void playBoard(int A[][3]);
 pair<int, int> findBestMove(int A[][3]);
-int calMinimax(int, pair<int, int> curIndex);
+int calMinimax(int A[][3], pair<int, int> curIndex);
 
 int main() {
   int board[3][3] = {0}; // X=1, O=2, _ = 0
@@ -83,12 +83,12 @@ void playBoard(int board[][3]) {
       cout << "Nhap vi tri danh: ";
       int x, y;
       cin >> x >> y;
-      if (board[x][y] != 0) {
+      if (board[x][y] == 0) {
         board[x][y] = 2; // O
         break;
-      }
-      else {
-        cout << "Vi tri da bi danh";
+      } else {
+        cout << "Vi tri da bi danh"
+             << "\n";
       }
     }
     // COM danh
@@ -115,7 +115,7 @@ pair<int, int> findBestMove(int A[][3]) {
   for (int i = 0; i < 3; i++) {
     for (int j = 0; j < 3; j++) {
       if (A[i][j] == 0) {
-        score = i + j; // find Minimax Function =>
+        score = calMinimax(A, bestMove);
         if (score > bestScore) {
           bestMove.first = i;
           bestMove.second = j;

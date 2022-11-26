@@ -23,3 +23,7 @@ Multiple methods
 ## Week 4: Minimax
 
 Use Minimax and alpha-beta pruning for Tic Tac Toe.
+
+## Week 5: Linear Regression
+
+https://colab.research.google.com/drive/15eoHJtTMsD5KJGaA7u6yB2UqjwWu6cdV?usp=sharing
